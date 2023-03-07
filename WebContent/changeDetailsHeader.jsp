@@ -11,7 +11,7 @@
     <div class="topnav sticky">
             <center><h2>Change Details<i class="fa fa-edit"></i></h2></center>
              <%String email=session.getAttribute("email").toString(); %>
-            <h2><a href="home.jsp"><i class='fas fa-arrow-circle-left'>Back</i></a></h2>
+            <h2><a href="index.jsp"><i class='fas fa-arrow-circle-left'>Back</i></a></h2>
              <h2><a href="">Your Profile(<%out.println(email); %>) <i class='fas fa-user-alt'></i></a></h2>
             <a href="changePassword.jsp">Change Password <i class='fas fa-key'></i></a>
           <%-- 

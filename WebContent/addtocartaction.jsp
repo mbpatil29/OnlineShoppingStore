@@ -34,7 +34,7 @@ try{
 	if(z==1)
 	{
 		st.executeUpdate("update cart set total='"+cart_total+"',quantity='"+quantity+"' where productid='"+productid+"' and email='"+email+"' and address is NULL");
-		response.sendRedirect("home.jsp?msg=exist");
+		response.sendRedirect("index.jsp?msg=exist");
 	}
 	if(z==0)
 	{
@@ -45,7 +45,7 @@ try{
 		ps.setInt(4,product_price);
 		ps.setInt(5,product_total);
 		ps.executeUpdate();
-		response.sendRedirect("home.jsp?msg=added");
+		response.sendRedirect("index.jsp?msg=added");
 	}
 	
 	
@@ -54,7 +54,7 @@ try{
 catch(Exception e)
 {
 	System.out.println(e);
-	response.sendRedirect("home.jsp?msg=invalid");
+	response.sendRedirect("index.jsp?msg=invalid");
 }
 
 

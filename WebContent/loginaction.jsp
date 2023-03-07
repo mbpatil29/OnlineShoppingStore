@@ -5,6 +5,7 @@
 <% 
 String email=request.getParameter("email");
 String password=request.getParameter("password");
+//Default login for Admin to see Info
 if("admin@gmail.com".equals(email) && "admin".equals(password))
 {
 	session.setAttribute("email", email);
@@ -25,7 +26,7 @@ else
 		{
 			z=1;
 			session.setAttribute("email", email);
-			response.sendRedirect("home.jsp");
+			response.sendRedirect("index.jsp");
 		}
 		if(z==0)
 		response.sendRedirect("login.jsp?msg=notexist");
